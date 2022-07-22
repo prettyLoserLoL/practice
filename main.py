@@ -38,13 +38,13 @@ def u_calc(t, x):
     return [e, 0]
 
 
-def itog(f, u, min_max, init_vals, dt):
+def itog(f, u, min_max, start_vals, dt):
     T = [x for x in float_range(min_max[0], min_max[1], dt)]    
     w = len(T)                                                  
-    h = len(init_vals)                                          
+    h = len(start_vals)                                          
     x = [[0 for x in range(w)] for y in range(h)]               
-    for i in range(len(init_vals)):
-        x[i][0] = init_vals[i]                                  
+    for i in range(len(start_vals)):
+        x[i][0] = start_vals[i]                                  
 
     dt = float(dt)
 
