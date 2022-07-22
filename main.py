@@ -28,11 +28,11 @@ def f_calc(t, x):
 def u_calc(t, x):
     x1, x2 = x
     try:
-        phi = (alf2 * x2 - (1 / T2) * (x2 - x2const)) / (bet2 * x2)
+        fi1 = (alf2 * x2 - (1 / T2) * (x2 - x2const)) / (bet2 * x2)
         f1 = alf1 * x1 - bet1 * x1 * x2
         f2 = - alf2 * x2 + bet2 * x1 * x2
-        phi2 = (x2const / (T2 * bet2 * x2 * x2)) * f2
-        e = - 1 / T1 * (x1 - phi) - f1 + phi2
+        fi2 = (x2const / (T2 * bet2 * x2 * x2)) * f2
+        e = - 1 / T1 * (x1 - fi1) - f1 + fi2
     except ZeroDivisionError:
         return [0, 0]
     return [e, 0]
