@@ -39,12 +39,12 @@ def u_calc(t, x):
 
 
 def itog(f, u, min_max, init_vals, dt):
-    T = [x for x in float_range(min_max[0], min_max[1], dt)]    # массив Т от мин до макс с шагом ДТ
-    w = len(T)                                                  # ширина матрицы
-    h = len(init_vals)                                          # высота матрицы = количеству уравнений
-    x = [[0 for x in range(w)] for y in range(h)]               # матрица из нулей
+    T = [x for x in float_range(min_max[0], min_max[1], dt)]    
+    w = len(T)                                                  
+    h = len(init_vals)                                          
+    x = [[0 for x in range(w)] for y in range(h)]               
     for i in range(len(init_vals)):
-        x[i][0] = init_vals[i]                                  # заполняем начальными значениями
+        x[i][0] = init_vals[i]                                  
 
     dt = float(dt)
 
@@ -53,7 +53,7 @@ def itog(f, u, min_max, init_vals, dt):
         fi = f(ti, [x[0][i - 1], x[1][i - 1]])
         ui = u(ti, [x[0][i - 1], x[1][i - 1]])
         for j in range(0, len(fi)):
-            h = x[j][i] + dt * fi[j] + ui[j]              # записывается в массив Х
+            h = x[j][i] + dt * fi[j] + ui[j]              
             if h > 1000:
                 h = 999
             elif h < -1000:
