@@ -87,23 +87,11 @@ df2 = pd.DataFrame({
     ,
     'Time': time
 })
-# fig1 = pl.figure(facecolor="white")
-# multiple line plot
+
 pl.plot('Time', 'f1', data=df1, marker=',', color='blue', linewidth=1)
 pl.plot('Time', 'f2', data=df2, marker=',', color='red', linewidth=1)
 pl.xlabel(" Value of t ")
 pl.ylabel(" Value of x ")
 pl.show()
 
-# pl.plot(mas[0], time, marker='o', color='orange', linewidth=2)
-# pl.plot(mas[1], time, marker='o', color='orange', linewidth=2)
-
-
-
-#
-# pl.plot(first, time)
-# pl.plot(second, time)
-# pl.xlabel("Value of x")
-# pl.ylabel("Value of y")
-# pl.show()
 
